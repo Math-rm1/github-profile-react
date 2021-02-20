@@ -6,8 +6,6 @@ function App() {
   const [search, setSearch] = useState('');
   const [userData, setUserData] = useState();
 
-  userData.blog = userData.blog.startsWith('http') ? userData.blog : `http://${userData.blog}`
-
   const handleSubmit = (event) => {
     event.preventDefault();
     fetch(`https://api.github.com/users/${search}`)
